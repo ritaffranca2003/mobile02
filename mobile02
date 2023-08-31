@@ -1,0 +1,44 @@
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Image, Text, View } from 'react-native';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.titulo}>Cardápio</Text>
+      <StatusBar style="auto" />
+      <View style={styles.colunas}>
+      <Image style={styles.imagem} source={{uri:'https://blog.letskuk.com.br/wp-content/uploads/2022/10/lanches-gourmet.jpg',}}></Image>
+      <Image style={styles.imagem} source={{uri:'https://blog.letskuk.com.br/wp-content/uploads/2022/10/lanches-gourmet.jpg',}}></Image>
+      </View>
+      <View style={styles.colunas}>
+      <Image style={styles.imagem} source={{uri:'https://blog.letskuk.com.br/wp-content/uploads/2022/10/lanches-gourmet.jpg',}}></Image>
+      <Image style={styles.imagem} source={{uri:'https://blog.letskuk.com.br/wp-content/uploads/2022/10/lanches-gourmet.jpg',}}></Image>
+      </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    margin:50,
+    backgroundColor: '#F76F45',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  titulo:{
+    marginTop:40,
+    fontSize: 50,
+    color: '#E02134',
+    fontStyle:'bold',
+  },
+  imagem:{
+    width:150,
+    height:150,
+    marginLeft: 12,
+    marginRight: 12,
+    marginTop: 20,
+  },
+  colunas:{
+    flexDirection: 'row',
+  }
+});
